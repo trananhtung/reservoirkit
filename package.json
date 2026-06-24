@@ -1,0 +1,46 @@
+{
+  "name": "reservoirkit",
+  "version": "0.1.0",
+  "description": "Zero-dependency reservoir sampling for TypeScript: Algorithm L (Vitter), weighted sampling, Fisher-Yates shuffle, stream sampling. Port of Python random.sample on iterables.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --forceExit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": [
+    "reservoir-sampling", "sampling", "random-sample",
+    "fisher-yates", "shuffle", "weighted-sampling",
+    "vitter", "algorithm-r", "algorithm-l",
+    "stream-processing", "typescript", "zero-dependency"
+  ],
+  "author": "trananhtung",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trananhtung/reservoirkit"
+  },
+  "homepage": "https://github.com/trananhtung/reservoirkit#readme",
+  "bugs": "https://github.com/trananhtung/reservoirkit/issues",
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
