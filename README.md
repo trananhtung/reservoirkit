@@ -1,5 +1,7 @@
 # reservoirkit
 
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+
 Zero-dependency reservoir sampling for TypeScript: Algorithm L (Vitter), weighted sampling (Efraimidis-Spirakis), Fisher-Yates shuffle, stream sampling. Drop-in replacement for the abandoned `reservoir` package (103k/week).
 
 [![npm](https://img.shields.io/npm/v/reservoirkit)](https://www.npmjs.com/package/reservoirkit)
@@ -224,6 +226,28 @@ function getExperimentGroup(allUsers: string[]): Set<string> {
 **Algorithm L** (Vitter 1987): instead of checking every item, computes how many items to _skip_ before the next reservoir replacement, using only a few arithmetic operations per accepted item. For k=100 sampling from n=1,000,000, this is ~3,000× fewer random number calls than Algorithm R.
 
 **Efraimidis-Spirakis (2006)**: assigns `key_i = u^(1/w_i)` to each item (where `u` is uniform [0,1]), then selects the top-k by key. Provably equivalent to weighted sampling without replacement.
+
+## Contributors ✨
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome — code, docs, bug reports, ideas, reviews! See the [emoji key](https://allcontributors.org/docs/en/emoji-key) for how each contribution is recognized, and open a PR or issue to get involved.
+
+Thanks goes to these wonderful people:
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/trananhtung"><img src="https://avatars.githubusercontent.com/u/30992229?v=4?s=100" width="100px;" alt="Tung Tran"/><br /><sub><b>Tung Tran</b></sub></a><br /><a href="https://github.com/trananhtung/reservoirkit/commits?author=trananhtung" title="Code">💻</a> <a href="#maintenance-trananhtung" title="Maintenance">🚧</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License
 
